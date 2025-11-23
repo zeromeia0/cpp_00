@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:22:58 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/22 16:04:45 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/23 20:34:04 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,11 @@ int main()
         if (cmd == "ADD")
             pb.AddContact();
         else if (cmd == "SEARCH")
+        {
             pb.DisplayAllContacts();
+            if (pb.DeepSearch() != 1)
+                continue ;
+        }
         else if (cmd == "EXIT")
             break;
         else

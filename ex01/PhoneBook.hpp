@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:23:01 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/22 18:40:19 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/23 20:37:54 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <limits>
 #include "Contact.hpp"
 
 class PhoneBook
@@ -44,6 +45,23 @@ class PhoneBook
             for (int i = 0; i < n; i++)
                 _contacts[i].DisplayGeneralContacts(i);
             std::cout << "*===========================================*\n\n";
+        }
+        int DeepSearch()
+        {
+            int index;
+            std::cout << "What person[index] are you looking for?: ";
+            std::cin >> index;
+            
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+            if (index > count || index > 8 || index < 0)
+            {
+                std::cout << "This is an invalid index\n";
+                return (-1);
+            }
+            else
+                _contacts[index].DisplayFullInformation();
+            return (1);
         }
 };
 

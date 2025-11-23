@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:34:05 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/22 21:24:29 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/23 20:31:01 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,4 +81,13 @@ void Contact::DisplayGeneralContacts(int index) const
               << std::setw(10) << FormatBook(FirstName) << "|"
               << std::setw(10) << FormatBook(LastName) << "|"
               << std::setw(10) << FormatBook(Nickname) << "|\n";
+}
+
+void Contact::DisplayFullInformation()
+{
+    std::cout << "First name: " << FirstName << std::endl;
+    std::cout << "Last name: " << LastName << std::endl;
+    std::cout << "Nickname: " << Nickname << std::endl;
+    std::cout << "Phone number: " << PhoneNumber << std::endl;
+    std::cout << "Darkest secret: " << DarkestSecret << std::endl;
 }
