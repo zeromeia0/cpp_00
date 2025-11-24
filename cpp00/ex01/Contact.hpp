@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:22:43 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/23 20:44:49 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/24 07:04:13 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ class Contact
         std::string PhoneNumber;
         std::string DarkestSecret;
     public:
-        void SetInfo();
+        int SetInfo();
         void DisplayFullInformation();
         void DisplayGeneralContacts(int index) const;
         std::string FormatBook(std::string s) const;
 };
 
-
+int    StrIsDigit(std::string s);
 
 
 #endif

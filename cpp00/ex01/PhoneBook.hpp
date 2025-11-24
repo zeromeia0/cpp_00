@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:23:01 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/23 20:47:07 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/24 07:28:58 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 #include <limits>
+#include <cstdio>
+#include <cctype>
 #include "Contact.hpp"
 
 class PhoneBook
@@ -26,11 +29,13 @@ class PhoneBook
         Contact _contacts[8];
         PhoneBook() : count(0) {};
         
-        void AddContact()
+        int AddContact()
         {
             int index = count % 8;
-            _contacts[index].SetInfo();
+            if (_contacts[index].SetInfo() == 0)
+                return (0);
             count++;
+            return (1);
         }
         
         void DisplayAllContacts() const
@@ -51,20 +56,36 @@ class PhoneBook
         int DeepSearch()
         {
             int index;
-            std::cout << "What person[index] are you looking for?: ";
-            std::cin >> index;
-            
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-            if (index > count || index > 8 || index < 0)
+            std::string input;            
+            while (1)
             {
-                std::cout << "This is an invalid index\n";
+                if (count == 0)
+                    return (std::cout << "Poor you! You have no friends to contact :'( \
+                        \nADD them and then comeback here :D\n", 1);
+                std::cout << "What person[index] are you looking for?: ";
+                std::getline(std::cin, input);
+                if (std::cin.eof())
+                    return (0);
+                if (input.empty())
+                    std::cout << "Can't be empty\n";
+                else
+                    break ;
+            }
+            if (!StrIsDigit(input))
+            {
+                std::cout << "This is an invalid index \n";
                 return (-1);
             }
+            index = atoi(input.c_str());
+            if (index < 0 || index >= 8)
+                return (std::cout << "This is an invalid index\n", -1);
+            else if (index >= count)
+                return (std::cout << "There is still no contact with this index dear user :D\n", -1);
             else
                 _contacts[index].DisplayFullInformation();
-            return (1);
-        }
+        return (1);
+    }
 };
+// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); <-- LEAVING THIS HERE TO STUDY LATER IF I WANT TO
 
 #endif
