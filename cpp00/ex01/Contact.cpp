@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:34:05 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/23 20:31:01 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/23 20:45:07 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int    str_digit(std::string s)
     }
     return (0);
 }
+
 std::string InputValidation(const std::string &prompt)
 {
     std::string input;
@@ -36,12 +37,13 @@ std::string InputValidation(const std::string &prompt)
         std::cout << prompt;
         std::getline(std::cin, input);
         if (input.empty())
-            std::cout << "Can't have empty information :)\n";
+            std::cout << "Can't have empty information :D\n";
         else
             break ;
     }
     return (input);
 }
+
 void Contact::SetInfo(void)
 {
     
@@ -58,7 +60,7 @@ void Contact::SetInfo(void)
         }
         else if (PhoneNumber.size() < 7 || PhoneNumber.size() > 12)
         {
-            std::cout << "Phone number must be betwwen 8 and 11 digits :)\n";
+            std::cout << "Phone number must be betwwen 8 and 11 digits :D\n";
             continue ;
         }
         else

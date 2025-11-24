@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:23:01 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/23 20:37:54 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/23 20:47:07 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class PhoneBook
             _contacts[index].SetInfo();
             count++;
         }
+        
         void DisplayAllContacts() const
         {
             int n = count < 8 ? count : 8;
@@ -46,6 +47,7 @@ class PhoneBook
                 _contacts[i].DisplayGeneralContacts(i);
             std::cout << "*===========================================*\n\n";
         }
+        
         int DeepSearch()
         {
             int index;

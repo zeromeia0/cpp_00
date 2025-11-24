@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:22:58 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/23 20:34:04 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/23 20:41:41 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,16 @@ int main()
 {
     PhoneBook pb;
     std::string cmd;
-
+    
     while (1)
     {
         std::cout << "Do you want to ADD, SEARCH, OR EXIT? ";
         std::getline(std::cin, cmd);
-        
+        if (cmd.empty())
+        {
+            std::cout << "\n";
+            break ;
+        }
         if (cmd == "ADD")
             pb.AddContact();
         else if (cmd == "SEARCH")
