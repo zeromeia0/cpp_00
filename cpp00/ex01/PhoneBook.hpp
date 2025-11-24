@@ -6,7 +6,7 @@
 /*   By: vvazzs <vvazzs@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 12:23:01 by vvazzs            #+#    #+#             */
-/*   Updated: 2025/11/24 07:28:58 by vvazzs           ###   ########.fr       */
+/*   Updated: 2025/11/24 07:33:33 by vvazzs           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,7 @@ class PhoneBook
                     break ;
             }
             if (!StrIsDigit(input))
-            {
-                std::cout << "This is an invalid index \n";
-                return (-1);
-            }
+                return (std::cout << "This is an invalid index \n", -1);
             index = atoi(input.c_str());
             if (index < 0 || index >= 8)
                 return (std::cout << "This is an invalid index\n", -1);
