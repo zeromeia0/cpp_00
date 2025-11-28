@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+         #
+#    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 23:58:40 by vvazzs            #+#    #+#              #
-#    Updated: 2025/11/25 19:01:50 by vivaz-ca         ###   ########.fr        #
+#    Updated: 2025/11/28 22:03:44 by jeslin-tici      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,11 @@ CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	violence
-SRC		=	main.cpp \
-			zombieHorde.cpp
+SRC		=	HumanA.cpp \
+			HumanB.cpp \
+			main.cpp \
+			Weapon.cpp
+
 
 OBJ		= $(SRC:.cpp=.o)
 

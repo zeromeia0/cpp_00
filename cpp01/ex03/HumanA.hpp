@@ -3,13 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vivaz-ca <vivaz-ca@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 21:03:23 by vivaz-ca          #+#    #+#             */
-/*   Updated: 2025/11/25 21:11:22 by vivaz-ca         ###   ########.fr       */
+/*   Updated: 2025/11/28 21:58:53 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 #include "Weapon.hpp"
 
 class HumanA{
@@ -22,3 +24,5 @@ class HumanA{
 		~HumanA() {};
 		void attack();
 };
+
+#endif
