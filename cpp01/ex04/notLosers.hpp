@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 22:27:40 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/11/28 22:32:22 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/11/28 23:17:47 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
-
+#include <cstring>
+#define BUFFER_SIZE 256
 #endif

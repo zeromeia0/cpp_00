@@ -6,14 +6,14 @@
 #    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 23:58:40 by vvazzs            #+#    #+#              #
-#    Updated: 2025/11/28 22:31:16 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2025/11/28 23:49:34 by jeslin-tici      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-NAME	=	violence
+NAME	=	winner
 SRC		=	main.cpp \
 
 
@@ -39,7 +39,7 @@ clean:
 
 fclean: clean
 	@echo -e "$(YELLOW)Removing [$(NAME)]$(RESET)"
-	@rm -f $(NAME)
+	@rm -f $(NAME) *.replace
 
 val: re
 	@valgrind --leak-check=full ./$(NAME)
