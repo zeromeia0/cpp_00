@@ -6,7 +6,7 @@
 #    By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/20 23:58:40 by vvazzs            #+#    #+#              #
-#    Updated: 2025/11/28 23:49:34 by jeslin-tici      ###   ########.fr        #
+#    Updated: 2025/12/02 18:50:48 by jeslin-tici      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,7 @@ CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 NAME	=	winner
-SRC		=	main.cpp \
-
+SRC		=	main.cpp
 
 OBJ		= $(SRC:.cpp=.o)
 

@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 00:01:16 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/02 14:27:52 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/02 18:45:37 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main()
 	
 	std::cout << "===AFTER BASIC TESTS===\n";
 	harl5.complain("INFO");
-	harl6.complain(NULL);
+	harl6.complain("vini");
 
 	return (0);
 }

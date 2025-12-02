@@ -6,7 +6,7 @@
 /*   By: jeslin-ticiane <jeslinticianevaz@gmail.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/29 00:01:11 by jeslin-tici       #+#    #+#             */
-/*   Updated: 2025/12/02 14:27:16 by jeslin-tici      ###   ########.fr       */
+/*   Updated: 2025/12/02 18:45:18 by jeslin-tici      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,13 @@ void Harl::complain(std::string level)
 			std::cout << "\n";
 		}
 	}	
+}
+
+void Harl::complain(const char* level)
+{
+    if (level == NULL) {
+        std::cout << "Invalid complain\n";
+        return;
+    }
+    complain(std::string(level));
 }
